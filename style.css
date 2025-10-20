@@ -280,7 +280,7 @@ a:focus {
 		0 0 20px rgba(255, 105, 180, 0.6),
 		0 0 30px rgba(255, 192, 203, 0.5);
 	animation: glow 3s ease-in-out infinite alternate;
-	line-height: 1.4; /* 👈 thêm để chữ không dính *
+	line-height: 1.4;
 }
 
 /* ✨ hiệu ứng nhấp nháy ánh sáng */
