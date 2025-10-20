@@ -280,6 +280,7 @@ a:focus {
 		0 0 20px rgba(255, 105, 180, 0.6),
 		0 0 30px rgba(255, 192, 203, 0.5);
 	animation: glow 3s ease-in-out infinite alternate;
+	line-height: 1.4; /* 👈 thêm để chữ không dính *
 }
 
 /* ✨ hiệu ứng nhấp nháy ánh sáng */
@@ -305,6 +306,7 @@ a:focus {
 	display: block;
 	margin-left: 3vw;
 	line-height: 0.5;
+	  line-height: 1.6; /* 👈 tăng khoảng cách dòng */
 }
 
 
@@ -409,5 +411,35 @@ a:focus {
   100% {
     transform: translateY(100vh) translateX(var(--x-move)) rotate(360deg);
     opacity: 0.2;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .grid {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+
+  .content__title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .content__title-sub {
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .cursor {
+    display: none;
   }
 }
