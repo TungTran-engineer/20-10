@@ -6426,3 +6426,24 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   });
   var cursor = new _cursor.default(document.querySelector('.cursor'));
   },{"../cursor":"LMRJ","./grid":"toX6","../utils":"MgTz"}]},{},["C3Xv"], null)
+
+
+  function createFlower() {
+  const flower = document.createElement('div');
+  flower.classList.add('flower');
+
+  // Vị trí và tốc độ ngẫu nhiên
+  flower.style.left = Math.random() * 100 + 'vw';
+  flower.style.animationDuration = 4 + Math.random() * 5 + 's';
+  flower.style.setProperty('--x-move', Math.random() * 100 - 50 + 'px');
+
+  document.body.appendChild(flower);
+
+  // Xóa sau khi rơi xong
+  setTimeout(() => {
+    flower.remove();
+  }, 9000);
+}
+
+// Tạo hoa liên tục
+setInterval(createFlower, 400);
